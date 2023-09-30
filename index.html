@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Abdulasit Yusuf" />
+    <meta name="description" content="Personal portfolio" />
+    <link rel="shortcut icon" href="./images/JD.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./dist/style.css" />
+    <title>Abdulasit Yusuf | Frontend Developer</title>
+  </head>
+  <body>
+    <a
+      class="absolute -translate-x-full focus:translate-x-0 focus:outline-none transition-transform"
+      href="#main"
+      >Skip to main content</a
+    >
+    <nav
+      class="p-2 flex justify-between items-center border-2 border-double border-red-300"
+    >
+      <a class="shrink-0 hover:scale-150 transition-all" href="/">
+        <img class="w-8 h-8" src="./images/JD.ico" alt="Icon" />
+      </a>
+      <ul class="font-semibold text-lg">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="contact">Contact</a></li>
+      </ul>
+      <label class="cursor-pointer" for="hamburger">
+        <input class="hidden peer" type="checkbox" id="hamburger" />
+        <div
+          class="w-8 h-1 mb-1 bg-black peer-checked:translate-y-[11px] peer-checked:rotate-[45deg] transition-all duration-500"
+        ></div>
+        <div
+          class="w-6 h-1 mb-1 bg-black peer-checked:opacity-0 transition-all duration-500"
+        ></div>
+        <div
+          class="w-8 h-1 bg-black peer-checked:translate-y-[-5px] peer-checked:rotate-[-45deg] transition-all duration-500"
+        ></div>
+      </label>
+    </nav>
+    <header id="main">
+      <p>Hi, I'm</p>
+      <h1>Abdulbasit Yusuf</h1>
+      <p>Frontend Developer</p>
+    </header>
+    <main>
+      <section aria-label="about" id="about">
+        <h2>About</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam,
+          quibusdam! Modi suscipit totam labore quaerat odio. Magni, officiis
+          beatae maxime placeat labore nemo ipsum minus voluptatibus. Quaerat
+          facere qui necessitatibus?
+        </p>
+      </section>
+      <section aria-label="projects" id="projects">
+        <h2>Featured Projetcs</h2>
+        <div>
+          <section>
+            <h3>Resume Builder</h3>
+            <img src="./images/resume-builder.png" alt="resume builder" />
+            <a href="https://jideotetic.github.io/resume-builder/">Live Site</a>
+            <a href="https://github.com/Jideotetic/resume-builder">Source</a>
+          </section>
+          <section>
+            <h3>Calculator</h3>
+            <img src="./images/calculator.png" alt="calculator" />
+            <a href="https://jideotetic.github.io/calculator/">Live Site</a>
+            <a href="https://github.com/Jideotetic/calculator">Source</a>
+          </section>
+          <section>
+            <h3>Rock Paper Scissors</h3>
+            <img
+              src="./images/rock-paper-scissors.png"
+              alt="rock paper scissors"
+            />
+            <a href="https://jideotetic.github.io/rock-paper-scissors/"
+              >Live Site</a
+            >
+            <a href="https://github.com/Jideotetic/rock-paper-scissors"
+              >Source</a
+            >
+          </section>
+          <section>
+            <h3>Etch A Sketch</h3>
+            <img src="./images/etch-a-sketch.png" alt="etch a sketch" />
+            <a href="https://jideotetic.github.io/etch-a-sketch/">Live Site</a>
+            <a href="https://github.com/Jideotetic/etch-a-sketch">Source</a>
+          </section>
+        </div>
+      </section>
+      <section aria-label="contact me" id="contact">
+        <h2>Contact Me</h2>
+        <form action="#" method="post">
+          <label for="name">
+            Name:
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+          </label>
+          <br />
+          <label for="email">
+            Email:
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </label>
+          <br />
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <ul>
+        <li><a href="">Github</a></li>
+        <li><a href="">Twitter</a></li>
+        <li><a href="">Linkedin</a></li>
+      </ul>
+      <p>&copy; 2023</p>
+    </footer>
+  </body>
+</html>
