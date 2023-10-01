@@ -23,31 +23,48 @@
       href="#main-content"
       >Skip to main content</a
     >
-    <nav
-      class="p-4 flex justify-between items-center fixed w-full bg-slate-50/100 shadow-xl"
-    >
-      <a
-        class="shrink-0 hover:scale-75 transition-transform duration-500 font-nabla text-4xl"
-        href="/"
-        >JD</a
-      >
-      <label class="cursor-pointer md:hidden">
-        <input class="peer hidden" type="checkbox" />
-        <div
-          class="w-8 h-1 mb-1 bg-neutral-700 peer-checked:translate-y-[11px] peer-checked:rotate-[45deg] transition-all duration-500"
-        ></div>
-        <div
-          class="w-6 h-1 mb-1 bg-neutral-700 peer-checked:opacity-0 transition-all duration-500"
-        ></div>
-        <div
-          class="w-8 h-1 bg-neutral-700 peer-checked:translate-y-[-5px] peer-checked:rotate-[-45deg] transition-all duration-500"
-        ></div>
-        <!-- mobile screen nav -->
-        <ul
-          class="flex-col items-center justify-center gap-10 absolute left-0 top-[72px] h-screen w-0 overflow-hidden flex peer-checked:w-screen bg-slate-50/90 transition-all duration-300 md:hidden"
+    <div class="fixed w-full bg-slate-50/100 shadow-xl">
+      <nav class="p-4 flex justify-between items-center mx-auto max-w-7xl">
+        <a
+          class="hover:scale-75 transition-transform duration-500 font-nabla text-4xl"
+          href="/"
+          >JD</a
         >
+        <label class="cursor-pointer md:hidden">
+          <input class="peer hidden" type="checkbox" />
+          <div
+            class="w-8 h-1 mb-1 bg-neutral-700 peer-checked:translate-y-[11px] peer-checked:rotate-[45deg] transition-all duration-500"
+          ></div>
+          <div
+            class="w-6 h-1 mb-1 bg-neutral-700 peer-checked:opacity-0 transition-all duration-500"
+          ></div>
+          <div
+            class="w-8 h-1 bg-neutral-700 peer-checked:translate-y-[-5px] peer-checked:rotate-[-45deg] transition-all duration-500"
+          ></div>
+          <!-- mobile screen nav -->
+          <ul
+            class="flex-col items-center justify-center gap-10 absolute left-0 top-[72px] h-screen w-0 overflow-hidden flex peer-checked:w-screen bg-slate-50/90 transition-all duration-300 md:hidden"
+          >
+            <li class="font-medium uppercase p-2">
+              <a href="#about"> About </a>
+            </li>
+            <li class="font-medium uppercase p-2">
+              <a href="#projects">Projects</a>
+            </li>
+            <li class="font-medium uppercase p-2">
+              <a href="mailto:jideotetic@gmail.com">Contact</a>
+            </li>
+            <li
+              class="font-medium uppercase bg-amber-300 p-2 rounded hover:bg-amber-500 text-center"
+            >
+              <a href="#download">Download Resume</a>
+            </li>
+          </ul>
+        </label>
+        <!-- large screen nav -->
+        <ul class="hidden md:flex gap-3">
           <li class="font-medium uppercase p-2">
-            <a href="#about"> About </a>
+            <a href="#about">About</a>
           </li>
           <li class="font-medium uppercase p-2">
             <a href="#projects">Projects</a>
@@ -61,30 +78,15 @@
             <a href="#download">Download Resume</a>
           </li>
         </ul>
-      </label>
-      <!-- large screen nav -->
-      <ul class="hidden md:flex gap-3">
-        <li class="font-medium uppercase p-2">
-          <a href="#about">About</a>
-        </li>
-        <li class="font-medium uppercase p-2">
-          <a href="#projects">Projects</a>
-        </li>
-        <li class="font-medium uppercase p-2">
-          <a href="#contact">Contact</a>
-        </li>
-        <li
-          class="font-medium uppercase bg-amber-300 p-2 rounded hover:bg-amber-500 text-center"
-        >
-          <a href="#download">Download Resume</a>
-        </li>
-      </ul>
-    </nav>
+      </nav>
+    </div>
     <header
-      class="p-4 h-screen flex justify-center items-center"
+      class="p-4 h-screen flex flex-col justify-between max-w-7xl mx-auto"
       id="main-content"
     >
-      <div>
+      <!-- div to push the text to center -->
+      <div></div>
+      <div class="self-center">
         <p
           class="text-2xl md:text-4xl mb-2 shadow-slate-500 font-medium transition-all duration-500"
         >
@@ -101,74 +103,125 @@
           Frontend Developer
         </p>
       </div>
-      <!-- <div
-        class="md:w-60 md:h-60 md:border md:border-solid border-slate-950 rounded-full absolute"
-      ></div> -->
+      <hr class="border-1 border-neutral-700" />
     </header>
-    <main class="p-4">
-      <section class="pt-[100px]" aria-labelledby="abt" id="about">
-        <h2 class="mb-5 text-center font-medium text-xl uppercase" id="abt">
-          About
+    <main class="p-4 max-w-7xl mx-auto">
+      <section class="mb-9" aria-labelledby="abt" id="about">
+        <h2 class="mb-9 text-center font-medium text-4xl uppercase" id="abt">
+          About Me
         </h2>
-        <div>
+        <div class="space-y-4 md:space-y-0 md:flex gap-10">
           <img
-            class="max-w-xs w-full mx-auto rounded-full"
+            class="max-w-xs h-auto mx-auto w-full rounded-full md:rounded-sm md:mx-0"
             src="./images/abdlbasit-yusuf.jpg"
             alt="Abdulasit posing for the camera"
           />
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam,
-            quibusdam! Modi suscipit totam labore quaerat odio. Magni, officiis
-            beatae maxime placeat labore nemo ipsum minus voluptatibus. Quaerat
-            facere qui necessitatibus? Lorem ipsum dolor sit amet consectetur,
-            adipisicing elit. Perspiciatis aliquam labore ad rerum non, fuga
-            maiores eligendi, illo voluptatibus similique eius incidunt dolorum,
-            deleniti eos officiis delectus quaerat accusamus iste!
-          </p>
+          <div class="text-center space-y-4">
+            <p>
+              Hello World! I'm Abdulbasit Yusuf, a Front-End Web Developer based
+              out of Lagos. From lines of code on a web page, I love combining
+              the worlds of logic and creative design to make responsive,
+              eye-catching, accessible, and user-friendly websites and.
+            </p>
+            <p>
+              I have 1 year of experience in training and skilled with HTML5,
+              CSS3, JavaScript, Git & GitHub with incredible ease of adaptation
+              and learning new technologies as need be. Currently learning React
+              and Tailwind CSS.
+            </p>
+            <p>
+              Technology leads, society follows. The move towards increasing
+              inclusivity and diversity in the industry through representation
+              is of importance to me. I'm currently searching for intern roles
+              to enable me work with a team and contibute to live project.
+            </p>
+          </div>
         </div>
       </section>
-      <section class="pt-[100px]" aria-labelledby="prj" id="projects">
-        <h2 class="mb-3" id="prj">Featured Projetcs</h2>
-        <ul>
-          <li>
-            <h3>Resume Builder</h3>
+      <section class="text-center" aria-labelledby="prj" id="projects">
+        <h2 class="mb-9 text-center font-medium text-4xl uppercase" id="prj">
+          Featured Projects
+        </h2>
+        <ul class="space-y-4">
+          <li class="space-y-4 md:flex items-center justify-evenly">
             <img
+              class="md:max-w-xs max-w-[50%] w-full mx-auto h-auto rounded shadow-xl md:mx-0"
               src="./images/resume-builder.png"
               alt="resume builder"
-              loading="lazy"
             />
-            <a href="https://jideotetic.github.io/resume-builder/">Live Site</a>
-            <a href="https://github.com/Jideotetic/resume-builder">Source</a>
+            <div>
+              <h3 class="mb-2 text-center font-medium text-2xl uppercase">
+                Resume Builder
+              </h3>
+              <a href="https://jideotetic.github.io/resume-builder/"
+                >Live Site</a
+              >
+              |
+              <a href="https://github.com/Jideotetic/resume-builder"
+                >Source Code</a
+              >
+            </div>
           </li>
-          <li>
-            <h3>Calculator</h3>
-            <img src="./images/calculator.png" alt="calculator" />
-            <a href="https://jideotetic.github.io/calculator/">Live Site</a>
-            <a href="https://github.com/Jideotetic/calculator">Source</a>
-          </li>
-          <li>
-            <h3>Rock Paper Scissors</h3>
+          <li class="space-y-4 md:flex items-center justify-evenly">
             <img
+              class="md:max-w-xs max-w-[50%] w-full mx-auto h-auto rounded shadow-xl md:mx-0"
+              src="./images/calculator.png"
+              alt="calculator"
+            />
+            <div>
+              <h3 class="mb-2 text-center font-medium text-2xl uppercase">
+                Calculator
+              </h3>
+              <a href="https://jideotetic.github.io/calculator/">Live Site</a>
+              |
+              <a href="https://github.com/Jideotetic/calculator">Source Code</a>
+            </div>
+          </li>
+          <li class="space-y-4 md:flex items-center justify-evenly">
+            <img
+              class="md:max-w-xs max-w-[50%] w-full mx-auto h-auto rounded shadow-xl md:mx-0"
               src="./images/rock-paper-scissors.png"
               alt="rock paper scissors"
             />
-            <a href="https://jideotetic.github.io/rock-paper-scissors/"
-              >Live Site</a
-            >
-            <a href="https://github.com/Jideotetic/rock-paper-scissors"
-              >Source</a
-            >
+            <div>
+              <h3
+                class="mb-2 text-center font-medium text-2xl uppercase"
+                title="Rock Paper Scissors"
+              >
+                RPS
+              </h3>
+              <a href="https://jideotetic.github.io/rock-paper-scissors/"
+                >Live Site</a
+              >
+              |
+              <a href="https://github.com/Jideotetic/rock-paper-scissors"
+                >Source Code</a
+              >
+            </div>
           </li>
-          <li>
-            <h3>Etch A Sketch</h3>
-            <img src="./images/etch-a-sketch.png" alt="etch a sketch" />
-            <a href="https://jideotetic.github.io/etch-a-sketch/">Live Site</a>
-            <a href="https://github.com/Jideotetic/etch-a-sketch">Source</a>
+          <li class="space-y-4 md:flex items-center justify-evenly">
+            <img
+              class="md:max-w-xs max-w-[50%] w-full mx-auto h-auto rounded shadow-xl md:mx-0"
+              src="./images/etch-a-sketch.png"
+              alt="etch a sketch"
+            />
+            <div>
+              <h3 class="mb-2 text-center font-medium text-2xl uppercase">
+                Etch A Sketch
+              </h3>
+              <a href="https://jideotetic.github.io/etch-a-sketch/"
+                >Live Site</a
+              >
+              |
+              <a href="https://github.com/Jideotetic/etch-a-sketch">Source</a>
+            </div>
           </li>
         </ul>
       </section>
-      <section class="pt-[100px]" aria-labelledby="cont" id="contact">
-        <h2 class="mb-3" id="cont">Contact Me</h2>
+      <!-- <section aria-labelledby="cont" id="contact">
+        <h2 class="mb-9 text-center font-medium text-4xl uppercase" id="cont">
+          Contact Me
+        </h2>
         <form action="#" method="post">
           <label for="name">
             Name:
@@ -195,16 +248,16 @@
 
           <button type="submit">Submit</button>
         </form>
-      </section>
-      <a href="#">Go to top</a>
+      </section> -->
     </main>
-    <footer class="p-4">
+    <footer class="p-4 max-w-7xl mx-auto">
       <ul>
         <li><a href="">Github</a></li>
         <li><a href="">Twitter</a></li>
         <li><a href="">Linkedin</a></li>
       </ul>
       <p>&copy; 2023</p>
+      <a href="#">Go to top</a>
     </footer>
   </body>
 </html>
