@@ -1,29 +1,75 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Abdulasit Yusuf" />
     <meta name="description" content="Personal portfolio" />
     <link rel="shortcut icon" href="./images/JD.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nabla&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./dist/style.css" />
     <title>Abdulasit Yusuf | Frontend Developer</title>
   </head>
-  <body class="text-black text-base md:text-xl">
+  <body class="text-neutral-700 text-base font-sans font-normal md:text-xl">
     <a
-      class="pl-4 text-base font-medium absolute z-50 -translate-x-full focus:translate-x-0 transition-transform"
+      class="bg-amber-300 p-2 rounded hover:bg-amber-500 absolute z-50 -translate-x-full focus:translate-x-0 transition-transform"
       href="#main-content"
       >Skip to main content</a
     >
     <nav
-      class="p-4 flex justify-between items-center fixed w-full bg-slate-50/90"
+      class="p-4 flex justify-between items-center fixed w-full bg-slate-50/100 shadow-xl"
     >
-      <a class="shrink-0 hover:scale-150 transition-all duration-500" href="/">
-        <img class="w-8 h-8" src="./images/JD.ico" alt="Icon" />
-      </a>
-      <ul class="md:flex gap-2 hidden">
+      <a
+        class="shrink-0 hover:scale-75 transition-all duration-500 font-nabla text-4xl"
+        href="/"
+        >JD</a
+      >
+      <label class="cursor-pointer md:hidden" for="menu-open">
+        <input
+          class="peer/menu hidden"
+          type="checkbox"
+          name="menu"
+          id="menu-open"
+        />
+        <div
+          class="w-8 h-1 mb-1 bg-neutral-700 peer-checked/menu:translate-y-[11px] peer-checked/menu:rotate-[45deg] transition-all duration-500"
+        ></div>
+        <div
+          class="w-6 h-1 mb-1 bg-neutral-700 peer-checked/menu:opacity-0 transition-all duration-500"
+        ></div>
+        <div
+          class="w-8 h-1 bg-neutral-700 peer-checked/menu:translate-y-[-5px] peer-checked/menu:rotate-[-45deg] transition-all duration-500"
+        ></div>
+        <ul
+          class="flex flex-col items-center justify-center gap-10 absolute left-0 top-[72px] h-screen w-0 overflow-hidden peer-checked/menu:w-screen bg-slate-50/90 transition-all duration-300 md:hidden"
+        >
+          <li class="font-medium uppercase p-2">
+            <a href="#about"> About </a>
+          </li>
+          <li class="font-medium uppercase p-2">
+            <a href="#projects">Projects</a>
+          </li>
+          <li class="font-medium uppercase p-2">
+            <a href="#contact">Contact</a>
+          </li>
+          <li
+            class="font-medium uppercase bg-amber-300 p-2 rounded hover:bg-amber-500 text-center"
+          >
+            <a href="">Download Resume</a>
+          </li>
+        </ul>
+      </label>
+
+      <ul class="hidden md:flex gap-10">
         <li class="font-medium uppercase p-2">
-          <a href="#about">About</a>
+          <a href="#about">
+            <label for="nav">About</label>
+          </a>
         </li>
         <li class="font-medium uppercase p-2">
           <a href="#projects">Projects</a>
@@ -37,20 +83,6 @@
           <a href="">Download Resume</a>
         </li>
       </ul>
-      <!-- <input class="peer" type="checkbox" id="hamburger" />
-      <label class="group cursor-pointer p-1" for="hamburger" tabindex="0"> -->
-      <button class="group p-2" type="button">
-        <div
-          class="w-8 h-1 mb-1 bg-black group-focus:translate-y-[11px] group-focus:rotate-[45deg] transition-all duration-500"
-        ></div>
-        <div
-          class="w-6 h-1 mb-1 bg-black group-active:opacity-0 transition-all duration-500"
-        ></div>
-        <div
-          class="w-8 h-1 bg-black group-active:translate-y-[-5px] group-active:rotate-[-45deg] transition-all duration-500"
-        ></div>
-      </button>
-      <!-- </label> -->
     </nav>
     <header
       class="p-4 h-screen flex justify-center items-center"
@@ -60,7 +92,9 @@
         <p class="text-base md:text-3xl mb-2 shadow-slate-500 font-medium">
           Hi, I'm
         </p>
-        <h1 class="text-5xl md:text-7xl mb-2 uppercase font-bold leading-snug">
+        <h1
+          class="text-5xl md:text-7xl mb:text-4xl mb-2 uppercase font-bold leading-snug"
+        >
           Abdulbasit Yusuf
         </h1>
         <p class="text-xl md:text-4xl uppercase font-medium">
@@ -68,7 +102,7 @@
         </p>
       </div>
       <div
-        class="md:w-80 md:h-80 md:border md:border-solid border-slate-950 rounded-full absolute"
+        class="md:w-60 md:h-60 md:border md:border-solid border-slate-950 rounded-full absolute"
       ></div>
     </header>
     <main class="p-4">
@@ -76,9 +110,9 @@
         <h2 class="mb-5 text-center font-medium text-xl uppercase" id="abt">
           About
         </h2>
-        <div class="flex gap-4 flex-col md:flex-row-reverse">
+        <div>
           <img
-            class="max-w-xs w-full mx-auto"
+            class="max-w-xs w-full mx-auto rounded-full"
             src="./images/abdlbasit-yusuf.jpg"
             alt="Abdulasit posing for the camera"
           />
@@ -86,7 +120,10 @@
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam,
             quibusdam! Modi suscipit totam labore quaerat odio. Magni, officiis
             beatae maxime placeat labore nemo ipsum minus voluptatibus. Quaerat
-            facere qui necessitatibus?
+            facere qui necessitatibus? Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. Perspiciatis aliquam labore ad rerum non, fuga
+            maiores eligendi, illo voluptatibus similique eius incidunt dolorum,
+            deleniti eos officiis delectus quaerat accusamus iste!
           </p>
         </div>
       </section>
