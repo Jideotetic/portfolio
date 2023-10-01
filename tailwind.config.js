@@ -6,9 +6,6 @@ module.exports = {
       fontFamily: {
         nabla: "Nabla, cursive",
       },
-      screens: {
-        mb: { max: "506px" },
-      },
     },
   },
   plugins: [],
