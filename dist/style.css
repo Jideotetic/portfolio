@@ -702,9 +702,18 @@ video {
   border-radius: 9999px;
 }
 
+.border-2 {
+  border-width: 2px;
+}
+
 .border-neutral-700 {
   --tw-border-opacity: 1;
   border-color: rgb(64 64 64 / var(--tw-border-opacity));
+}
+
+.border-red-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(185 28 28 / var(--tw-border-opacity));
 }
 
 .bg-amber-300 {
@@ -728,6 +737,16 @@ video {
 
 .bg-slate-50\/90 {
   background-color: rgb(248 250 252 / 0.9);
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .p-2 {
@@ -790,6 +809,14 @@ video {
   color: rgb(64 64 64 / var(--tw-text-opacity));
 }
 
+.underline {
+  text-decoration-line: underline;
+}
+
+.decoration-black {
+  text-decoration-color: #000;
+}
+
 .shadow-xl {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
@@ -830,6 +857,10 @@ video {
 .hover\:bg-amber-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(245 158 11 / var(--tw-bg-opacity));
+}
+
+.hover\:no-underline:hover {
+  text-decoration-line: none;
 }
 
 .focus\:translate-x-0:focus {
@@ -885,6 +916,14 @@ video {
     background-color: rgb(248 250 252 / var(--tw-bg-opacity));
   }
 
+  .dark\:bg-neutral-900\/100 {
+    background-color: rgb(23 23 23 / 1);
+  }
+
+  .dark\:bg-neutral-900\/90 {
+    background-color: rgb(23 23 23 / 0.9);
+  }
+
   @media (prefers-color-scheme: dark) {
     .dark\:dark\:text-neutral-700 {
       --tw-text-opacity: 1;
@@ -900,6 +939,26 @@ video {
   .dark\:text-slate-50 {
     --tw-text-opacity: 1;
     color: rgb(248 250 252 / var(--tw-text-opacity));
+  }
+
+  .peer:checked ~ .dark\:peer-checked\:bg-black {
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  }
+
+  .peer:checked ~ .dark\:peer-checked\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+
+  .peer:checked ~ .peer-checked\:dark\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+
+  .peer:checked ~ .peer-checked\:dark\:bg-black {
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
   }
 }
 
